@@ -19,11 +19,22 @@ class LinkedList:
             temp.next = node
 
     def delete(self, data):
+        # start at the beginning of the linked list
         temp = self.head
+
+        # search through linked list from beginning to end
         while temp.next != None:
+            # look ahead to check if the next node
+            # has the data we are searching for
+            # if so, then we want to delete that next node
             if temp.next.data == data:
+                # ! delete node by changing the pointers !
+                # we want to keep the current node
+                # we want to delete the next node
+                # we want to keep the node after next node
                 temp.next = temp.next.next
-                # delete node
+
+            # iterate to the next node
             temp = temp.next
 
     def string(self):
