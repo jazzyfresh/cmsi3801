@@ -37,7 +37,7 @@ class LinkedList:
             # iterate to the next node
             temp = temp.next
 
-    def string(self):
+    def __repr__(self):
         s = ""
         temp = self.head
         while temp != None:
@@ -74,10 +74,10 @@ def delete_middle(node):
 
 
 
-print(l.string())
+print(l)
 print(l.head.next.next.data)
 delete_middle(l.head.next.next)
-print(l.string())
+print(l)
 
 
 
